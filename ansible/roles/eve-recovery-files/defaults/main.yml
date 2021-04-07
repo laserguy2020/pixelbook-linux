@@ -4,6 +4,6 @@ main_workdir: /opt/eve-linux-setup
 login_user: vagrant # override at command line with local username
 
 recovery_mount_point: "{{ main_workdir }}/recovery_mnt"
-eve_recovery_image: "chromeos_11647.154.0_eve_recovery_stable-channel_mp.bin"
-eve_recovery_image_sha256: "ccde720355b8d0f1bbd890b379614bf7cb378feb856f45fe1d11bec50f9a80ad"
+eve_recovery_image: "chromeos_13505.111.0_atlas_recovery_stable-channel_mp.bin"
+eve_recovery_image_sha256: "8408c501908502dcd5a57779b4d06e5516898ade06ac9087702a0bd05e532d29"
 cras_etc_dir: /usr/local/etc

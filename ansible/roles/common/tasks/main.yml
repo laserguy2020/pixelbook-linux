@@ -1,6 +1,6 @@
 ---
 - name: install OS packages
-  include_tasks: "packages-{{ ansible_distribution }}.yml"
+  include_tasks: "packages-Fedora.yml"
 
 - name: ensure main working dir exists
   become: true
@@ -8,4 +8,3 @@
     path: "{{ main_workdir }}"
     mode: 0777
     state: directory
-  

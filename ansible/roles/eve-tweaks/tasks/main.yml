@@ -7,29 +7,29 @@
     dest: /lib/modprobe.d/eve-blacklist.conf
 
 ### Enable zram swap
-- name: Copy zram setup script
-  become: true
-  copy:
-    src: setup-zram-swap.sh
-    dest: /usr/local/sbin/setup-zram-swap.sh
-    owner: root
-    group: root
-    mode: 0744
-
-- name: Copy zram-swap systemd service file
-  become: true
-  copy:
-    src: zram-swap.service
-    dest: /etc/systemd/system/zram-swap.service
-    owner: root
-    group: root
-    mode: 0644
-
-- name: Enable zram-swap systemd service
-  become: true
-  command: systemctl enable zram-swap
-  args:
-    creates: /etc/systemd/system/multi-user.target.wants/zram-swap.service
+# - name: Copy zram setup script
+#   become: true
+#   copy:
+#     src: setup-zram-swap.sh
+#     dest: /usr/local/sbin/setup-zram-swap.sh
+#     owner: root
+#     group: root
+#     mode: 0744
+#
+# - name: Copy zram-swap systemd service file
+#   become: true
+#   copy:
+#     src: zram-swap.service
+#     dest: /etc/systemd/system/zram-swap.service
+#     owner: root
+#     group: root
+#     mode: 0644
+#
+# - name: Enable zram-swap systemd service
+#   become: true
+#   command: systemctl enable zram-swap
+#   args:
+#     creates: /etc/systemd/system/multi-user.target.wants/zram-swap.service
 
 ### tweak touchpad pressure for libinput
 
@@ -37,7 +37,7 @@
   become: true
   copy:
     src: libinput-local-overrides.quirks
-    dest: /etc/libinput/local-overrides.quirks
+    dest: /usr/share/X11/xorg.conf.d/10-local-overrides.conf
 
 ### keyboard backlight
 
@@ -66,7 +66,7 @@
 
 ### Map google assistant key to super
 #
-#   note: change eve_keyboard_assistant_keycode var if you want a 
+#   note: change eve_keyboard_assistant_keycode var if you want a
 #   different keycode for the google assistant key.
 #
 #   you can also set eve_keyboard_search_keycode to remap the search

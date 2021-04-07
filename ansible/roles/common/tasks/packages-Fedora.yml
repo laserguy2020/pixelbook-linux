@@ -1,5 +1,5 @@
 ---
-- name: Install dnf packages 
+- name: Install dnf packages
   become: true
   dnf:
     name:
@@ -8,10 +8,24 @@
       - libtool
       - python
       - python3
+      - gtest-devel
+      - gtest
+      - gcc-c++
+      - clang
+      - jsoncpp-devel
+      - xorg-x11-server-Xorg
+      - xorg-x11-drv-evdev-devel
+      - xorg-x11-drv-libinput-devel
+      - xorg-x11-drv-openchrome-devel
+      - xorg-x11-drv-synaptics-devel
+      - xorg-x11-drv-wacom-devel
+      - xorg-x11-proto-devel.noarch
+      - xorg-x11-server-Xwayland-devel
+      - xorg-x11-server-devel
+      - xorg-x11-xtrans-devel
 
       # For bluetooth selinux fix
       - selinux-policy
-      - python2-libselinux
 
       # Audio / CRAS dependencies
       - acpid
@@ -22,5 +36,4 @@
       - ladspa-devel
       - speex-devel
       - speexdsp-devel
-    state: latest 
-
+    state: latest

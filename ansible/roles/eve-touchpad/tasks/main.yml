@@ -3,13 +3,13 @@
 # Todo: move apt install to common role
 - name: Install build dependencies
   become: true
-  apt:
+  dnf:
     name:
-      - libgtest-dev
-      - libjsoncpp-dev
-      - libxi-dev
-      - xutils-dev
-      - xserver-xorg-dev
+      - libXi
+      - libXi-devel
+      - xorg-x11-utils.x86_64
+      - xorg-x11-util-macros.noarch
+      - xorg-x11-server-source.noarch
 
 # libevdev (chromium fork)
 - name: Clone chromium fork of libevdev
