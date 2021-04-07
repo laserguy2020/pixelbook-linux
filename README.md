@@ -1,5 +1,7 @@
 # Installing "real" linux on a Google Pixelbook
 
+* This is my attempt to pick up the work left off for Pixelbook Go. I would like to try to get it working for both Ubuntu and Fedora. Currently this is setup for Fedora 34beta *
+
 This repo documents the process of replacing ChromeOS on a stock [Google Pixelbook][pixelbook_product_page]
 with a "real" linux distribution. It also contains an automated configuration script that will fix things
 that are broken in a stock install, like sound, display and keyboard backlights, touchpad sensitivity, etc.
@@ -42,7 +44,7 @@ Here's what's working at the moment:
 | Suspend            | Working              | Working                                                           |
 | Touchpad           | Working, but awkward | Working (tweaked to feel nice)                                    |
 | Display backlight  | Always on at 100%    | Adjustable using standard controls                                |
-| Sound              | Broken               | Working, [see details](implementation-details.md#audio-support)   |
+| Sound              | Broken               | Broken,                                                           |
 | Keyboard backlight | Broken               | Working (using helper script to adjust)                           |
 | Swap               | Working              | zram swap only [see details](implementation-details#swap-support) |
 | Hibernate          | Untested             | Unsupported, [see details](implementation-details.md#hibernation) |
