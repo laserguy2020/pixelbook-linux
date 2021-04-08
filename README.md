@@ -46,8 +46,8 @@ Here's what's working at the moment:
 | Display backlight  | Always on at 100%    | Adjustable using standard controls                                |
 | Sound              | Broken               | Broken,                                                           |
 | Keyboard backlight | Broken               | Working (using helper script to adjust)                           |
-| Swap               | Working              | zram swap only [see details](implementation-details#swap-support) |
-| Hibernate          | Untested             | Unsupported, [see details](implementation-details.md#hibernation) |
+| Swap               | Working              | Swap Working                                                      |
+| Hibernate          | Untested             | Seems to be working                                               |
 
 
 **Known limitations**:
